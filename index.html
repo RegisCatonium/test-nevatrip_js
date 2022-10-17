@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Тестовое задание 2 nevatrip</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<form action="#" class="form">
+			<select class="form__item" name="route" id="route">
+				<option value="0" selected disabled>Выберите маршрут</option>
+				<option value="1">из A в B</option>
+				<option value="2">из B в A</option>
+				<option value="3">из A в B и обратно в А</option>
+			 </select>
+	
+			<label class="form__label" for="time">Выберите время</label>
+			<select class="form__item" name="time" id="timeAB">
+			</select>
+			<select class="form__item hidden" name="time" id="timeBA">
+			</select>
+
+			<label class="form__label" for="num">Количество билетов</label>
+			<input class="form__item" type="number" id="num" value="0" min="0">
+			<button class="form__button" id="btn-count">Посчитать</button>
+
+			<div class="total hidden" id="total">
+				<p class="total__price">Вы выбрали <span id="tickets"></span> по маршруту <span id="rt"></span> стоимостью: <span id="price"></span></p>
+				<p>Это путешествие займет у вас 50 минут</p>
+				<p>Теплоход отправляется в <span id="dispatch"></span>, а прибудет в <span id="arrival"></span></p>
+			</div>
+		</form>
+	</div>
+
+	<script src="js/common.js"></script>
+
+</body>
+
+</html>
