@@ -24,20 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (routeValue == 1) {
 			pr = 700
 			str = 'из A в B'
+			dispatchTime = new Date(+blockAB.value)
+			arrivalTime = new Date(+blockAB.value + 50 * 6e4)
 		}
 		if (routeValue == 2) {
 			pr = 700
 			str = 'из A в B'
+			dispatchTime = new Date(+blockBA.value)
+			arrivalTime = new Date(+blockBA.value + 50 * 6e4)
 		}
 		if (routeValue == 3) {
 			pr = 1200
 			str = 'из A в B и обратно в A'
+			dispatchTime = new Date(+blockAB.value)
+			arrivalTime = new Date(+blockAB.value + 50 * 6e4)
 		}
-
-		console.log(dispatchTime)
-
-		dispatchTime = new Date(+blockAB.value)
-		arrivalTime = new Date(+blockAB.value + 50 * 6e4)
 
 		let total = pr * num
 		
